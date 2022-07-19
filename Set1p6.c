@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 int main(){
-    // Write a menu driven program to accept a number in any Number System [from Binary, Decimal, Octal, and Hex] and convert and display the same in any other amongst these
+ 
 
     printf("1 : Decimal \t2 : Binary \n3 : Octal \t4 : Hexadecimal\n");
     printf("Enter the type of number you want to enter : ");
@@ -12,7 +12,7 @@ int main(){
     int input,dec=0,digit,mult=1;
     char hex_input[30];
 
-    switch(t1){                  //taking every input in decimal number system
+    switch(t1){                  
         case 1:                     // dec -> dec
             scanf("%d",&input);
             dec=input;
@@ -38,7 +38,8 @@ int main(){
         case 4:
             scanf("%s",hex_input);  // hex -> dec
             int length=strlen(hex_input)-1;
-            for (int i=length; i >=0; i--)
+            int i;
+            for (i=length; i >=0; i--)
             {
                 if (hex_input[i]>='0' && hex_input[i]<='9')
                 {
@@ -112,7 +113,8 @@ int main(){
                 dec/=16;
             }
             int length2=strlen(hex_output)-1;
-            for (int j =length2 ; j >= 0; j--)
+            int j;
+            for (j =length2 ; j >= 0; j--)
             {
                 printf("%c",hex_output[j]);
             }
